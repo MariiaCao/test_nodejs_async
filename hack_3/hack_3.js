@@ -5,8 +5,17 @@
 - Return: "response" global de la petición 
 */
 
+const axios = require('axios');
+
 async function fnTest() {
-  //...
+  let url = 'https://jsonplaceholder.typicode.com/posts/1';
+  let response = await axios({
+    method: 'put',
+    url: url,
+    data: {
+      "id": "101"
+    }
+  })
   return response;
 }
 

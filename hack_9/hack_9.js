@@ -4,10 +4,11 @@
 - Endpoint: https://jsonplaceholder.typicode.com/posts
 - Return: el total del "response"
 */
-
+const axios = require('axios');
 async function fnTest() {
-  //...
-  return 
+  let {data} = await axios.post('https://jsonplaceholder.typicode.com/posts/', {"id":"1"});
+
+  return data;
 }
 
 module.exports = fnTest;

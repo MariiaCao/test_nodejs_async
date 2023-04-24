@@ -12,11 +12,11 @@
 } 
  NOTA: se envia el "id" por parámetro con valor 30
 */
-
+const axios = require('axios');
 
 async function fnTest(id) {
-  //...
-  return 
+  let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts/30');
+  return data;
 }
 
 module.exports = fnTest;
